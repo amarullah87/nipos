@@ -1,0 +1,1611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D577F112-01FF-42FC-AEBA-EDFD7D101C15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Nibras_POS.My.MyApplication</StartupObject>
+    <RootNamespace>Nibras_POS</RootNamespace>
+    <AssemblyName>Nibras POS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Nibras POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Nibras POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_nibras.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Nibras POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Nibras POS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.2.Core, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=6.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="FormDialog\DPembelianDepoEdit.Designer.vb">
+      <DependentUpon>DPembelianDepoEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianDepoEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianDeposit.Designer.vb">
+      <DependentUpon>DPembelianDeposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianDeposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianKredit.Designer.vb">
+      <DependentUpon>DPembelianKredit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianKredit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianTunai.Designer.vb">
+      <DependentUpon>DPembelianTunai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianTunai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianTunaiEdit.Designer.vb">
+      <DependentUpon>DPembelianTunaiEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDialog\DPembelianTunaiEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetting.Designer.vb">
+      <DependentUpon>FormSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\BackupDatabase.Designer.vb">
+      <DependentUpon>BackupDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\BackupDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DaftarItem.Designer.vb">
+      <DependentUpon>DaftarItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DaftarItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DaftarUser.Designer.vb">
+      <DependentUpon>DaftarUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DaftarUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DaftarUserAdd.Designer.vb">
+      <DependentUpon>DaftarUserAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DaftarUserAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DepositPelanggan.Designer.vb">
+      <DependentUpon>DepositPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DepositPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DownloadBarang.Designer.vb">
+      <DependentUpon>DownloadBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DownloadBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\DownloadMember.Designer.vb">
+      <DependentUpon>DownloadMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\DownloadMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportMember.Designer.vb">
+      <DependentUpon>ImportMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportPembelian.Designer.vb">
+      <DependentUpon>ImportPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoAwalPersediaan.Designer.vb">
+      <DependentUpon>ImportSaldoAwalPersediaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoAwalPersediaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoHutang.Designer.vb">
+      <DependentUpon>ImportSaldoHutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoHutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoPiutang.Designer.vb">
+      <DependentUpon>ImportSaldoPiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportSaldoPiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ImportSupplier.Designer.vb">
+      <DependentUpon>ImportSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ImportSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\ListDataMember.Designer.vb">
+      <DependentUpon>ListDataMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\ListDataMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\LogAktivitas.Designer.vb">
+      <DependentUpon>LogAktivitas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\LogAktivitas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterCustomer.Designer.vb">
+      <DependentUpon>MasterCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterGroup.Designer.vb">
+      <DependentUpon>MasterGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterGroupUmur.Designer.vb">
+      <DependentUpon>MasterGroupUmur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterGroupUmur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterPerkiraan.Designer.vb">
+      <DependentUpon>MasterPerkiraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterPerkiraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterPerkiraanNew.Designer.vb">
+      <DependentUpon>MasterPerkiraanNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterPerkiraanNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterProfil.Designer.vb">
+      <DependentUpon>MasterProfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterProfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\MasterSupplier.Designer.vb">
+      <DependentUpon>MasterSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\MasterSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarang.Designer.vb">
+      <DependentUpon>PencarianBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangBeliOff.Designer.vb">
+      <DependentUpon>PencarianBarangBeliOff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangBeliOff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangEdit.Designer.vb">
+      <DependentUpon>PencarianBarangEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangItemKeluar.Designer.vb">
+      <DependentUpon>PencarianBarangItemKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangItemKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangItemMasuk.Designer.vb">
+      <DependentUpon>PencarianBarangItemMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangItemMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangJual.Designer.vb">
+      <DependentUpon>PencarianBarangJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangJualEdit.Designer.vb">
+      <DependentUpon>PencarianBarangJualEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangJualEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPersediaan.Designer.vb">
+      <DependentUpon>PencarianBarangPersediaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPersediaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPesanBeli.Designer.vb">
+      <DependentUpon>PencarianBarangPesanBeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPesanBeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPesanJual.Designer.vb">
+      <DependentUpon>PencarianBarangPesanJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangPesanJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangSO.Designer.vb">
+      <DependentUpon>PencarianBarangSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianBarangSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianMember.Designer.vb">
+      <DependentUpon>PencarianMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianSupplier.Designer.vb">
+      <DependentUpon>PencarianSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\PencarianSupplierPesanBeli.Designer.vb">
+      <DependentUpon>PencarianSupplierPesanBeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\PencarianSupplierPesanBeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\RestoreDatabase.Designer.vb">
+      <DependentUpon>RestoreDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\RestoreDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\SettingPoint.Designer.vb">
+      <DependentUpon>SettingPoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\SettingPoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\TambahItem.Designer.vb">
+      <DependentUpon>TambahItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\TambahItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\UploadTransaksiForm.Designer.vb">
+      <DependentUpon>UploadTransaksiForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\UploadTransaksiForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterData\WaitForm3.Designer.vb">
+      <DependentUpon>WaitForm3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MasterData\WaitForm3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master_perkiraan.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>master_perkiraan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="models\ConfigModule.vb" />
+    <Compile Include="models\HotKeyRegistryClass.vb" />
+    <Compile Include="models\KeypressHandler.vb" />
+    <Compile Include="models\PiutangList.vb" />
+    <Compile Include="models\QueryNewItem.vb" />
+    <Compile Include="models\UploadMaster.vb" />
+    <Compile Include="models\UploadMember.vb" />
+    <Compile Include="models\UploadTransaksi.vb" />
+    <Compile Include="models\UploadTransaksiAll.vb" />
+    <Compile Include="models\UploadTransaksiPenjualan.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reporting\CetakFaktur.Designer.vb">
+      <DependentUpon>CetakFaktur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\CetakFaktur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafik10.Designer.vb">
+      <DependentUpon>LaporanGrafik10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafik10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafikBulan.Designer.vb">
+      <DependentUpon>LaporanGrafikBulan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafikBulan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafikHari.Designer.vb">
+      <DependentUpon>LaporanGrafikHari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanGrafikHari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanHutangTable.Designer.vb">
+      <DependentUpon>LaporanHutangTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanHutangTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasir.Designer.vb">
+      <DependentUpon>LaporanKasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasKeluar.Designer.vb">
+      <DependentUpon>LaporanKasKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasMasuk.Designer.vb">
+      <DependentUpon>LaporanKasMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasTransfer.Designer.vb">
+      <DependentUpon>LaporanKasTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanKasTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPersediaan.Designer.vb">
+      <DependentUpon>LaporanPersediaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPersediaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPersediaanKeluar.Designer.vb">
+      <DependentUpon>LaporanPersediaanKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPersediaanKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPiutangTable.Designer.vb">
+      <DependentUpon>LaporanPiutangTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPiutangTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustNHs.Designer.vb">
+      <DependentUpon>LaporanRekapCustNHs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustNHs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanReturBeli.Designer.vb">
+      <DependentUpon>LaporanReturBeli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanReturBeli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\SettingPrinter.Designer.vb">
+      <DependentUpon>SettingPrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\SettingPrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPenjualan.Designer.vb">
+      <DependentUpon>DaftarPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarSO.Designer.vb">
+      <DependentUpon>DaftarSO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarSO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanBukuBesar.Designer.vb">
+      <DependentUpon>LaporanBukuBesar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanBukuBesar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanHutangBeredar.Designer.vb">
+      <DependentUpon>LaporanHutangBeredar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanHutangBeredar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanJurnal.Designer.vb">
+      <DependentUpon>LaporanJurnal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanJurnal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanMasterCust.Designer.vb">
+      <DependentUpon>LaporanMasterCust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanMasterCust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanMasterItem.Designer.vb">
+      <DependentUpon>LaporanMasterItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanMasterItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanMutasiItem.Designer.vb">
+      <DependentUpon>LaporanMutasiItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanMutasiItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanNeraca.Designer.vb">
+      <DependentUpon>LaporanNeraca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanNeraca.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPembelian.Designer.vb">
+      <DependentUpon>LaporanPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPembelianItem.Designer.vb">
+      <DependentUpon>LaporanPembelianItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPembelianItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPenjualan.Designer.vb">
+      <DependentUpon>LaporanPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanPiutangBeredar.Designer.vb">
+      <DependentUpon>LaporanPiutangBeredar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanPiutangBeredar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustomer.Designer.vb">
+      <DependentUpon>LaporanRekapCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustomer10.Designer.vb">
+      <DependentUpon>LaporanRekapCustomer10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanRekapCustomer10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\LaporanReturPenjualan.Designer.vb">
+      <DependentUpon>LaporanReturPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\LaporanReturPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ListJurnal.Designer.vb">
+      <DependentUpon>ListJurnal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ListJurnal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\Penjualan10Terbanyak.Designer.vb">
+      <DependentUpon>Penjualan10Terbanyak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Penjualan10Terbanyak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\PenjualanItem.Designer.vb">
+      <DependentUpon>PenjualanItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PenjualanItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\PenjualanMember.Designer.vb">
+      <DependentUpon>PenjualanMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\PenjualanMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\RekapPenjualan.Designer.vb">
+      <DependentUpon>RekapPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\RekapPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportBukuBesar.Designer.vb">
+      <DependentUpon>ReportBukuBesar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportBukuBesar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportJurnal.Designer.vb">
+      <DependentUpon>ReportJurnal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportJurnal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportLabaRugi.Designer.vb">
+      <DependentUpon>ReportLabaRugi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportLabaRugi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportNeraca.Designer.vb">
+      <DependentUpon>ReportNeraca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportNeraca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportNetSales.Designer.vb">
+      <DependentUpon>ReportNetSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportNetSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestingForm.Designer.vb">
+      <DependentUpon>TestingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarItemKeluar.Designer.vb">
+      <DependentUpon>DaftarItemKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarItemKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarItemMasuk.Designer.vb">
+      <DependentUpon>DaftarItemMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarItemMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarJurnal.Designer.vb">
+      <DependentUpon>DaftarJurnal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarJurnal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarJurnalForm.Designer.vb">
+      <DependentUpon>DaftarJurnalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarJurnalForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasKeluar.Designer.vb">
+      <DependentUpon>DaftarKasKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasMasuk.Designer.vb">
+      <DependentUpon>DaftarKasMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasTransfer.Designer.vb">
+      <DependentUpon>DaftarKasTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarKasTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPembayaranHutang.Designer.vb">
+      <DependentUpon>DaftarPembayaranHutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPembayaranHutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPembayaranPiutang.Designer.vb">
+      <DependentUpon>DaftarPembayaranPiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPembayaranPiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPesanan.Designer.vb">
+      <DependentUpon>DaftarPesanan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPesanan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPesananJual.Designer.vb">
+      <DependentUpon>DaftarPesananJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarPesananJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarReturJual.Designer.vb">
+      <DependentUpon>DaftarReturJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarReturJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DaftarSODetail.Designer.vb">
+      <DependentUpon>DaftarSODetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DaftarSODetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DetailJualNhsNew.Designer.vb">
+      <DependentUpon>DetailJualNhsNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DetailJualNhsNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DetailPembelian.Designer.vb">
+      <DependentUpon>DetailPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DetailPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DetailPembelianNew.Designer.vb">
+      <DependentUpon>DetailPembelianNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DetailPembelianNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DetailPenjualanNhs.Designer.vb">
+      <DependentUpon>DetailPenjualanNhs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DetailPenjualanNhs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DetailReturJual.Designer.vb">
+      <DependentUpon>DetailReturJual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DetailReturJual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DialogExit.Designer.vb">
+      <DependentUpon>DialogExit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DialogExit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaran.Designer.vb">
+      <DependentUpon>DialogPembayaran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaranNhs.Designer.vb">
+      <DependentUpon>DialogPembayaranNhs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaranNhs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaranNhsEdit.Designer.vb">
+      <DependentUpon>DialogPembayaranNhsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\DialogPembayaranNhsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\HistoryPembelian.Designer.vb">
+      <DependentUpon>HistoryPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\HistoryPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\HistoryPenjualan.Designer.vb">
+      <DependentUpon>HistoryPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\HistoryPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ListSaldoAwalHutang.Designer.vb">
+      <DependentUpon>ListSaldoAwalHutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ListSaldoAwalHutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PesananKarung.Designer.vb">
+      <DependentUpon>PesananKarung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PesananKarung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PesananPembelian.Designer.vb">
+      <DependentUpon>PesananPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PesananPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PesananPenjualan.Designer.vb">
+      <DependentUpon>PesananPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PesananPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalHutangForm.Designer.vb">
+      <DependentUpon>SaldoAwalHutangForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalHutangForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPerkiraan.Designer.vb">
+      <DependentUpon>SaldoAwalPerkiraan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPerkiraan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPersediaan.Designer.vb">
+      <DependentUpon>SaldoAwalPersediaan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPersediaan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPiutangForm.Designer.vb">
+      <DependentUpon>SaldoAwalPiutangForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SaldoAwalPiutangForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahDeposit.Designer.vb">
+      <DependentUpon>TambahDeposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahDeposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahDepositSupplier.Designer.vb">
+      <DependentUpon>TambahDepositSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahDepositSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasKeluar.Designer.vb">
+      <DependentUpon>TambahKasKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasMasuk.Designer.vb">
+      <DependentUpon>TambahKasMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasTransfer.Designer.vb">
+      <DependentUpon>TambahKasTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahKasTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TambahPembayaranHutang.Designer.vb">
+      <DependentUpon>TambahPembayaranHutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TambahPembayaranHutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Testing.Designer.vb">
+      <DependentUpon>Testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiBayarUtang.Designer.vb">
+      <DependentUpon>TransaksiBayarUtang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiBayarUtang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiItemKeluar.Designer.vb">
+      <DependentUpon>TransaksiItemKeluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiItemKeluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiItemMasuk.Designer.vb">
+      <DependentUpon>TransaksiItemMasuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiItemMasuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembayaranPiutang.Designer.vb">
+      <DependentUpon>TransaksiPembayaranPiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembayaranPiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembelian.Designer.vb">
+      <DependentUpon>TransaksiPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembelianOld.Designer.vb">
+      <DependentUpon>TransaksiPembelianOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPembelianOld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPenjualan.Designer.vb">
+      <DependentUpon>TransaksiPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPenjualanNhs.Designer.vb">
+      <DependentUpon>TransaksiPenjualanNhs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiPenjualanNhs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiReturPembelian.Designer.vb">
+      <DependentUpon>TransaksiReturPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiReturPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiReturPenjualan.Designer.vb">
+      <DependentUpon>TransaksiReturPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiReturPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiStokOpname.Designer.vb">
+      <DependentUpon>TransaksiStokOpname.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiStokOpname.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiStokOpnameNew.Designer.vb">
+      <DependentUpon>TransaksiStokOpnameNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiStokOpnameNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiTerimaPiutang.Designer.vb">
+      <DependentUpon>TransaksiTerimaPiutang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\TransaksiTerimaPiutang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\UbahPembelian.Designer.vb">
+      <DependentUpon>UbahPembelian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\UbahPembelian.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\UbahPenjualan.Designer.vb">
+      <DependentUpon>UbahPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\UbahPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi\WaitForm2.Designer.vb">
+      <DependentUpon>WaitForm2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\WaitForm2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitFormMain.Designer.vb">
+      <DependentUpon>WaitFormMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WaitFormMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormDialog\DPembelianDepoEdit.resx">
+      <DependentUpon>DPembelianDepoEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\DPembelianDeposit.resx">
+      <DependentUpon>DPembelianDeposit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\DPembelianKredit.resx">
+      <DependentUpon>DPembelianKredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\DPembelianTunai.resx">
+      <DependentUpon>DPembelianTunai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialog\DPembelianTunaiEdit.resx">
+      <DependentUpon>DPembelianTunaiEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\BackupDatabase.resx">
+      <DependentUpon>BackupDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DaftarItem.resx">
+      <DependentUpon>DaftarItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DaftarUser.resx">
+      <DependentUpon>DaftarUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DaftarUserAdd.resx">
+      <DependentUpon>DaftarUserAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DepositPelanggan.resx">
+      <DependentUpon>DepositPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DownloadBarang.resx">
+      <DependentUpon>DownloadBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\DownloadMember.resx">
+      <DependentUpon>DownloadMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportMember.resx">
+      <DependentUpon>ImportMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportPembelian.resx">
+      <DependentUpon>ImportPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportSaldoAwalPersediaan.resx">
+      <DependentUpon>ImportSaldoAwalPersediaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportSaldoHutang.resx">
+      <DependentUpon>ImportSaldoHutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportSaldoPiutang.resx">
+      <DependentUpon>ImportSaldoPiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ImportSupplier.resx">
+      <DependentUpon>ImportSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\ListDataMember.resx">
+      <DependentUpon>ListDataMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\LogAktivitas.resx">
+      <DependentUpon>LogAktivitas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterCustomer.resx">
+      <DependentUpon>MasterCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterGroup.resx">
+      <DependentUpon>MasterGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterGroupUmur.resx">
+      <DependentUpon>MasterGroupUmur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterPerkiraan.resx">
+      <DependentUpon>MasterPerkiraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterPerkiraanNew.resx">
+      <DependentUpon>MasterPerkiraanNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterProfil.resx">
+      <DependentUpon>MasterProfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\MasterSupplier.resx">
+      <DependentUpon>MasterSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarang.resx">
+      <DependentUpon>PencarianBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangBeliOff.resx">
+      <DependentUpon>PencarianBarangBeliOff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangEdit.resx">
+      <DependentUpon>PencarianBarangEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangItemKeluar.resx">
+      <DependentUpon>PencarianBarangItemKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangItemMasuk.resx">
+      <DependentUpon>PencarianBarangItemMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangJual.resx">
+      <DependentUpon>PencarianBarangJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangJualEdit.resx">
+      <DependentUpon>PencarianBarangJualEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangPersediaan.resx">
+      <DependentUpon>PencarianBarangPersediaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangPesanBeli.resx">
+      <DependentUpon>PencarianBarangPesanBeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangPesanJual.resx">
+      <DependentUpon>PencarianBarangPesanJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianBarangSO.resx">
+      <DependentUpon>PencarianBarangSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianMember.resx">
+      <DependentUpon>PencarianMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianSupplier.resx">
+      <DependentUpon>PencarianSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\PencarianSupplierPesanBeli.resx">
+      <DependentUpon>PencarianSupplierPesanBeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\RestoreDatabase.resx">
+      <DependentUpon>RestoreDatabase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\SettingPoint.resx">
+      <DependentUpon>SettingPoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\TambahItem.resx">
+      <DependentUpon>TambahItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\UploadTransaksiForm.resx">
+      <DependentUpon>UploadTransaksiForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterData\WaitForm3.resx">
+      <DependentUpon>WaitForm3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\CetakFaktur.resx">
+      <DependentUpon>CetakFaktur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanGrafik10.resx">
+      <DependentUpon>LaporanGrafik10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanGrafikBulan.resx">
+      <DependentUpon>LaporanGrafikBulan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanGrafikHari.resx">
+      <DependentUpon>LaporanGrafikHari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanHutangTable.resx">
+      <DependentUpon>LaporanHutangTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanKasir.resx">
+      <DependentUpon>LaporanKasir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanKasKeluar.resx">
+      <DependentUpon>LaporanKasKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanKasMasuk.resx">
+      <DependentUpon>LaporanKasMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanKasTransfer.resx">
+      <DependentUpon>LaporanKasTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPersediaan.resx">
+      <DependentUpon>LaporanPersediaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPersediaanKeluar.resx">
+      <DependentUpon>LaporanPersediaanKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPiutangTable.resx">
+      <DependentUpon>LaporanPiutangTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanRekapCustNHs.resx">
+      <DependentUpon>LaporanRekapCustNHs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanReturBeli.resx">
+      <DependentUpon>LaporanReturBeli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\SettingPrinter.resx">
+      <DependentUpon>SettingPrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarPenjualan.resx">
+      <DependentUpon>DaftarPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarSO.resx">
+      <DependentUpon>DaftarSO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanBukuBesar.resx">
+      <DependentUpon>LaporanBukuBesar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanHutangBeredar.resx">
+      <DependentUpon>LaporanHutangBeredar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanJurnal.resx">
+      <DependentUpon>LaporanJurnal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanMasterCust.resx">
+      <DependentUpon>LaporanMasterCust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanMasterItem.resx">
+      <DependentUpon>LaporanMasterItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanMutasiItem.resx">
+      <DependentUpon>LaporanMutasiItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanNeraca.resx">
+      <DependentUpon>LaporanNeraca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPembelian.resx">
+      <DependentUpon>LaporanPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPembelianItem.resx">
+      <DependentUpon>LaporanPembelianItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPenjualan.resx">
+      <DependentUpon>LaporanPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanPiutangBeredar.resx">
+      <DependentUpon>LaporanPiutangBeredar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanRekapCustomer.resx">
+      <DependentUpon>LaporanRekapCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanRekapCustomer10.resx">
+      <DependentUpon>LaporanRekapCustomer10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\LaporanReturPenjualan.resx">
+      <DependentUpon>LaporanReturPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ListJurnal.resx">
+      <DependentUpon>ListJurnal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\Penjualan10Terbanyak.resx">
+      <DependentUpon>Penjualan10Terbanyak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\PenjualanItem.resx">
+      <DependentUpon>PenjualanItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\PenjualanMember.resx">
+      <DependentUpon>PenjualanMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RekapPenjualan.resx">
+      <DependentUpon>RekapPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportBukuBesar.resx">
+      <DependentUpon>ReportBukuBesar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportJurnal.resx">
+      <DependentUpon>ReportJurnal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportLabaRugi.resx">
+      <DependentUpon>ReportLabaRugi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportNeraca.resx">
+      <DependentUpon>ReportNeraca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportNetSales.resx">
+      <DependentUpon>ReportNetSales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingForm.resx">
+      <DependentUpon>TestingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarItemKeluar.resx">
+      <DependentUpon>DaftarItemKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarItemMasuk.resx">
+      <DependentUpon>DaftarItemMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarJurnal.resx">
+      <DependentUpon>DaftarJurnal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarJurnalForm.resx">
+      <DependentUpon>DaftarJurnalForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarKasKeluar.resx">
+      <DependentUpon>DaftarKasKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarKasMasuk.resx">
+      <DependentUpon>DaftarKasMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarKasTransfer.resx">
+      <DependentUpon>DaftarKasTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarPembayaranHutang.resx">
+      <DependentUpon>DaftarPembayaranHutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarPembayaranPiutang.resx">
+      <DependentUpon>DaftarPembayaranPiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarPesanan.resx">
+      <DependentUpon>DaftarPesanan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarPesananJual.resx">
+      <DependentUpon>DaftarPesananJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarReturJual.resx">
+      <DependentUpon>DaftarReturJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DaftarSODetail.resx">
+      <DependentUpon>DaftarSODetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DetailJualNhsNew.resx">
+      <DependentUpon>DetailJualNhsNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DetailPembelian.resx">
+      <DependentUpon>DetailPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DetailPembelianNew.resx">
+      <DependentUpon>DetailPembelianNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DetailPenjualanNhs.resx">
+      <DependentUpon>DetailPenjualanNhs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DetailReturJual.resx">
+      <DependentUpon>DetailReturJual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DialogExit.resx">
+      <DependentUpon>DialogExit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DialogPembayaran.resx">
+      <DependentUpon>DialogPembayaran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DialogPembayaranNhs.resx">
+      <DependentUpon>DialogPembayaranNhs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\DialogPembayaranNhsEdit.resx">
+      <DependentUpon>DialogPembayaranNhsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\HistoryPembelian.resx">
+      <DependentUpon>HistoryPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\HistoryPenjualan.resx">
+      <DependentUpon>HistoryPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\ListSaldoAwalHutang.resx">
+      <DependentUpon>ListSaldoAwalHutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PesananKarung.resx">
+      <DependentUpon>PesananKarung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PesananPembelian.resx">
+      <DependentUpon>PesananPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PesananPenjualan.resx">
+      <DependentUpon>PesananPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SaldoAwalHutangForm.resx">
+      <DependentUpon>SaldoAwalHutangForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SaldoAwalPerkiraan.resx">
+      <DependentUpon>SaldoAwalPerkiraan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SaldoAwalPersediaan.resx">
+      <DependentUpon>SaldoAwalPersediaan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SaldoAwalPiutangForm.resx">
+      <DependentUpon>SaldoAwalPiutangForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahDeposit.resx">
+      <DependentUpon>TambahDeposit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahDepositSupplier.resx">
+      <DependentUpon>TambahDepositSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahKasKeluar.resx">
+      <DependentUpon>TambahKasKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahKasMasuk.resx">
+      <DependentUpon>TambahKasMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahKasTransfer.resx">
+      <DependentUpon>TambahKasTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TambahPembayaranHutang.resx">
+      <DependentUpon>TambahPembayaranHutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Testing.resx">
+      <DependentUpon>Testing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiBayarUtang.resx">
+      <DependentUpon>TransaksiBayarUtang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiItemKeluar.resx">
+      <DependentUpon>TransaksiItemKeluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiItemMasuk.resx">
+      <DependentUpon>TransaksiItemMasuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiPembayaranPiutang.resx">
+      <DependentUpon>TransaksiPembayaranPiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiPembelian.resx">
+      <DependentUpon>TransaksiPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiPembelianOld.resx">
+      <DependentUpon>TransaksiPembelianOld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiPenjualan.resx">
+      <DependentUpon>TransaksiPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiPenjualanNhs.resx">
+      <DependentUpon>TransaksiPenjualanNhs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiReturPembelian.resx">
+      <DependentUpon>TransaksiReturPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiReturPenjualan.resx">
+      <DependentUpon>TransaksiReturPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiStokOpname.resx">
+      <DependentUpon>TransaksiStokOpname.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiStokOpnameNew.resx">
+      <DependentUpon>TransaksiStokOpnameNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\TransaksiTerimaPiutang.resx">
+      <DependentUpon>TransaksiTerimaPiutang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\UbahPembelian.resx">
+      <DependentUpon>UbahPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\UbahPenjualan.resx">
+      <DependentUpon>UbahPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\WaitForm2.resx">
+      <DependentUpon>WaitForm2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitFormMain.resx">
+      <DependentUpon>WaitFormMain.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="master_perkiraan.xsc">
+      <DependentUpon>master_perkiraan.xsd</DependentUpon>
+    </None>
+    <None Include="master_perkiraan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>master_perkiraan.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="master_perkiraan.xss">
+      <DependentUpon>master_perkiraan.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_nibras.ico" />
+    <None Include="Resources\main_bg.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
